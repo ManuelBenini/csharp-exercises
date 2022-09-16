@@ -242,6 +242,8 @@ Console.WriteLine($"La somma degli elementi dispari dell'array è: {sum}");
 
 */
 
+/*
+
 int[] numbers = new int[100];
 int sum = 0;
 
@@ -252,7 +254,7 @@ do
 
     while(userNumber < 1)
     {
-        Console.WriteLine($"Inserire un numero maggiore di 0");
+        Console.WriteLine("Inserire un numero maggiore di 0");
         userNumber = Convert.ToInt32(Console.ReadLine());
     }
 
@@ -262,5 +264,34 @@ do
 
 Console.WriteLine($"La somma dei numeri inseriti è {sum}");
 
+*/
+
+#endregion
+
+#region SNACK 10
+
+/* Consegna
+
+    Fai inserire un numero, che chiameremo N, all'utente.
+    Genera N array, ognuno formato da 10 numeri casuali tra 1 e 100.
+    Ogni volta che ne crei uno, stampalo a schermo.
+
+*/
+
+Console.WriteLine("Inserire un numero.");
+int userNumber = Convert.ToInt32(Console.ReadLine());
+
+for (int i = 0; i < userNumber; i++)
+{
+    int[] numbers = new int[10];
+
+    for (int x = 0; x < 10; x++)
+    {
+        Random number = new Random();
+        numbers[x] = number.Next(1, 100);
+    }
+
+    Console.WriteLine($"L'array appena creato contiene i seguenti numeri randomici: {string.Join(", ", numbers)}");
+}
 
 #endregion
