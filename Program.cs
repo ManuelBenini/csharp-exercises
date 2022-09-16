@@ -146,6 +146,8 @@ else
 
 */
 
+/*
+
 string[] invitedGuests = { "Paolo", "Manuel", "Agostino", "Silvia", "Andrea", "Luca", "Sebastiano" };
 bool isUserInvited = false;
 
@@ -168,5 +170,33 @@ else
 {
     Console.WriteLine("Non sei nella lista degli invitati");
 }
+
+*/
+
+#endregion
+
+#region SNACK 7
+
+/* Consegna
+
+    Crea un array vuoto. Chiedi per 6 volte all'utente di inserire un numero, se è dispari inseriscilo nell'array.
+
+*/
+
+
+int[] oddNumbers = new int[6];
+
+for (int i = 0; i < oddNumbers.Length; i++)
+{
+    Console.WriteLine($"Inserire un numero. Numeri da inserire rimanenti: {oddNumbers.Length - i}");
+    int userNumber = Convert.ToInt32(Console.ReadLine());
+
+    if (userNumber % 2 != 0)
+    {
+        oddNumbers[i] = userNumber;
+    }
+}
+
+Console.WriteLine($"L'array dei numeri dispari contiene questi numeri: {string.Join(", ", oddNumbers)}");
 
 #endregion
