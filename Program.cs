@@ -102,7 +102,7 @@ for (int i = 2; i <= numbers; i++)
     sum = sum + i;
 }
 
-float median = (float)sum / (numbers - 2);
+float median = (float)sum / (numbers - 1);
 
 Console.WriteLine($"La somma dei numeri da 2 a 10 è: {sum} , mentre la media è {median}");
 
