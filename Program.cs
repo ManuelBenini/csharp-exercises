@@ -278,6 +278,8 @@ Console.WriteLine($"La somma dei numeri inseriti è {sum}");
 
 */
 
+/*
+
 Console.WriteLine("Inserire un numero.");
 int userNumber = Convert.ToInt32(Console.ReadLine());
 
@@ -292,6 +294,48 @@ for (int i = 0; i < userNumber; i++)
     }
 
     Console.WriteLine($"L'array appena creato contiene i seguenti numeri randomici: {string.Join(", ", numbers)}");
+}
+
+*/
+
+#endregion
+
+#region SNACK 11
+
+/* Consegna
+
+    Dare la possibilità di inserire due parole.
+    Verificare tramite una funzione che le due parole abbiano la stessa lunghezza.
+    Se hanno la stessa lunghezza, stamparle entramble. Altrimenti stampare la più lunga delle due.
+
+*/
+
+Console.WriteLine("Inserire la prima parola.");
+string firstWord = Console.ReadLine();
+
+Console.WriteLine("Inserire la seconda parola.");
+string secondWord = Console.ReadLine();
+
+LenghtVerifier(firstWord, secondWord);
+
+
+
+string LenghtVerifier(string firstString, string secondString)
+{
+    if (firstString.Length == secondString.Length)
+    {
+        Console.WriteLine($"Le due stringhe inserite ({firstString} , {secondString}) hanno la stessa lunghezza.");
+    }
+    else if (firstString.Length > secondString.Length)
+    {
+        Console.WriteLine($"La stringa più lunga tra le due inserite è {firstString}");
+    }
+    else
+    {
+        Console.WriteLine($"La stringa più lunga tra le due inserite è {secondString}");
+    }
+
+    return firstString;
 }
 
 #endregion
