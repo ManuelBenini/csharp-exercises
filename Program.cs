@@ -183,6 +183,8 @@ else
 
 */
 
+/*
+
 
 int[] oddNumbers = new int[6];
 
@@ -198,5 +200,31 @@ for (int i = 0; i < oddNumbers.Length; i++)
 }
 
 Console.WriteLine($"L'array dei numeri dispari contiene questi numeri: {string.Join(", ", oddNumbers)}");
+
+*/
+
+#endregion
+
+#region SNACK 8
+
+/* Consegna
+
+    Crea un array di numeri interi e fai la somma di tutti gli elementi che sono in posizioni dispari.
+
+*/
+
+int[] numbers = {1, 2, 3, 5, 6, 7, 8, 9, 10};
+int sum = 0;
+
+for (int i = 0; i < numbers.Length; i++)
+{
+    if (i % 2 != 0)
+    {
+        sum = sum + numbers[i];
+    }
+}
+
+Console.WriteLine($"La somma degli elementi dispari dell'array è: {sum}");
+
 
 #endregion
