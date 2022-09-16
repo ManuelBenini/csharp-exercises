@@ -114,9 +114,12 @@ Console.WriteLine($"La somma dei numeri da 2 a 10 è: {sum} , mentre la media è
 
 /* Consegna
 
-    Calcola la somma e la media dei numeri da 2 a 10
+    Il software chiede all'utente di inserire un numero. Se il numero inserito è pari, stampa il numero,
+    se è dispari, stampa il numero successivo.
 
 */
+
+/*
 
 Console.WriteLine("Inserire un numero");
 int number = Convert.ToInt32(Console.ReadLine());
@@ -128,6 +131,42 @@ if (number % 2 == 0)
 else
 {
     Console.WriteLine($"Il numero inserito ({number} è dispari, per cui verrà stampato il numero successivo: {number + 1})");
+}
+
+*/
+
+#endregion
+
+#region SNACK 6
+
+/* Consegna
+
+    In un array sono contenuti i nomi degli invitati alla festa del grande Gatsby.
+    Chiedi all'utente il suo nome e comunicagli se può partecipare o meno alla festa.
+
+*/
+
+string[] invitedGuests = { "Paolo", "Manuel", "Agostino", "Silvia", "Andrea", "Luca", "Sebastiano" };
+bool isUserInvited = false;
+
+Console.WriteLine("Scopri se sei invitato alla festa inserendo il tuo nome");
+string guestName = Console.ReadLine();
+
+for (int i = 0; i < invitedGuests.Length; i++)
+{
+    if (invitedGuests[i].ToLower() == guestName.ToLower())
+    {
+        isUserInvited = true;
+    }
+}
+
+if (isUserInvited)
+{
+    Console.WriteLine("Sei nella lista degli invitati!");
+}
+else
+{
+    Console.WriteLine("Non sei nella lista degli invitati");
 }
 
 #endregion
