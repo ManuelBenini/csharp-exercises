@@ -310,6 +310,8 @@ for (int i = 0; i < userNumber; i++)
 
 */
 
+/*
+
 Console.WriteLine("Inserire la prima parola.");
 string firstWord = Console.ReadLine();
 
@@ -320,7 +322,7 @@ LenghtVerifier(firstWord, secondWord);
 
 
 
-string LenghtVerifier(string firstString, string secondString)
+void LenghtVerifier(string firstString, string secondString)
 {
     if (firstString.Length == secondString.Length)
     {
@@ -336,6 +338,36 @@ string LenghtVerifier(string firstString, string secondString)
     }
 
     return firstString;
+}
+
+*/
+
+#endregion
+
+#region SNACK 12
+
+/* Consegna
+
+    Scrivere una funzione per verificare se un numero è pari o dispari.
+    Quindi chiedere un numero all'utente e comunicargli se è pari o dispari.
+
+*/
+
+Console.WriteLine("Inserire un numero.");
+int userNumber = Convert.ToInt32(Console.ReadLine());
+
+EvenOddVerifier(userNumber);
+
+void EvenOddVerifier(int number)
+{
+    if (number % 2 == 0)
+    {
+        Console.WriteLine($"Il numero {number} è pari.");
+    }
+    else
+    {
+        Console.WriteLine($"Il numero {number} è dispari.");
+    }
 }
 
 #endregion
