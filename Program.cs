@@ -213,6 +213,8 @@ Console.WriteLine($"L'array dei numeri dispari contiene questi numeri: {string.J
 
 */
 
+/*
+
 int[] numbers = {1, 2, 3, 5, 6, 7, 8, 9, 10};
 int sum = 0;
 
@@ -225,6 +227,40 @@ for (int i = 0; i < numbers.Length; i++)
 }
 
 Console.WriteLine($"La somma degli elementi dispari dell'array è: {sum}");
+
+*/
+
+#endregion
+
+#region SNACK 9
+
+/* Consegna
+
+    Crea un array vuoto e chiedi all'utente un numero da inserire nell'array.
+    Continua a chiedere i numeri all'utente e a inserirli nell'array, fino a
+    quando la somma degli elementi è minore di 50.
+
+*/
+
+int[] numbers = new int[100];
+int sum = 0;
+
+do
+{
+    Console.WriteLine($"Inserire un numero. Le sarà richiesto finchè la somma totale dei numeri non superi 50.");
+    int userNumber = Convert.ToInt32(Console.ReadLine());
+
+    while(userNumber < 1)
+    {
+        Console.WriteLine($"Inserire un numero maggiore di 0");
+        userNumber = Convert.ToInt32(Console.ReadLine());
+    }
+
+    sum = sum + userNumber;
+
+} while (sum < 50);
+
+Console.WriteLine($"La somma dei numeri inseriti è {sum}");
 
 
 #endregion
