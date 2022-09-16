@@ -92,6 +92,8 @@ Console.WriteLine($"La somma di tutti i numeri inseriti è: {sum}");
 
 */
 
+/*
+
 int numbers = 10; 
 int sum = 0;
 
@@ -103,5 +105,29 @@ for (int i = 2; i <= numbers; i++)
 float median = (float)sum / (numbers - 2);
 
 Console.WriteLine($"La somma dei numeri da 2 a 10 è: {sum} , mentre la media è {median}");
+
+*/
+
+#endregion
+
+#region SNACK 5
+
+/* Consegna
+
+    Calcola la somma e la media dei numeri da 2 a 10
+
+*/
+
+Console.WriteLine("Inserire un numero");
+int number = Convert.ToInt32(Console.ReadLine());
+
+if (number % 2 == 0)
+{
+    Console.WriteLine($"Il numero inserito ({number}) è pari");
+}
+else
+{
+    Console.WriteLine($"Il numero inserito ({number} è dispari, per cui verrà stampato il numero successivo: {number + 1})");
+}
 
 #endregion
